@@ -1,10 +1,17 @@
 import users from "./users.js"
 
+// №1
+const getUserNames = users => {
+     return users.map(user => user.name);
+};
+console.log(getUserNames(users));
 
-const getUserNames=users.map(user=>user.name)
+// №2
+const getUsersWithEyeColor = (users, color) => {
+    const qwe = users.filter(user => users.eyeColor);
+    if (color === users.eyeColor) {
+        return qwe;
+    }
+};
 
-// const getUserNames = users => {
-//     users.map(user=>user.name)
-  
-// };
-console.log(getUserNames);
+console.log(getUsersWithEyeColor(users, 'blue'));
